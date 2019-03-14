@@ -212,7 +212,26 @@ namespace InfluxDB.Net
         {
             InfluxDbApiResponse response = await _influxDbClient.GetContinuousQueries(NoErrorHandlers, database);
 
-            return response.ReadAs<List<ContinuousQuery>>();
+            var result = response.ReadAs<QueryResult>();
+            var values = result.Results[0].Series
+                .Where(it => it.Values?.Length > 0)
+                .Select(it => it.Values)
+                .FirstOrDefault();
+
+            if (values == null)
+            {
+                return new List<ContinuousQuery>();
+            }
+
+            var cqs = values
+                .Select(it => new ContinuousQuery
+                {
+                    Name = (string)it[0],
+                    Query = (string)it[1],
+                })
+                .ToList();
+
+            return cqs;
         }
 
         /// <summary>

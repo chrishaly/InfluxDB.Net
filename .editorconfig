@@ -1,0 +1,38 @@
+; Top-most EditorConfig file
+root = true
+
+; Unix-style newlines
+[*]
+indent_style = space
+indent_size = 4
+#end_of_line = LF
+
+; 4-column space indentation
+[*.{cs,tpl}]
+indent_style = space
+indent_size = 4
+
+[*.aspx]
+indent_style = space
+indent_size = 4
+
+[*.xml]
+indent_style = space
+indent_size = 4
+
+[*.{config, tpl}]
+indent_style = space
+indent_size = 2
+
+[*.xml]
+indent_style = space
+indent_size = 2
+
+; 2-column tab indentation
+[*.js]
+indent_style = space
+indent_size = 4
+
+[*.html]
+indent_style = space
+indent_size = 4

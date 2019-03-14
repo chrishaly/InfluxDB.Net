@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28711.60
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{91B2CB56-7AB0-4AF1-A081-95525F8A754C}"
 	ProjectSection(SolutionItems) = preProject
@@ -23,6 +23,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfluxDB.Net.Tests", "InfluxDB.Net.Tests\InfluxDB.Net.Tests.csproj", "{56B4EF11-8B2A-4862-8723-FC4368274768}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InfluxDB.Net.Core", "InfluxDB.Net\InfluxDB.Net.Core.csproj", "{27ED586A-2EE0-4A0B-92BB-AFF6A611182F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfluxDB.Net.Tests.Core", "InfluxDB.Net.Tests.Core\InfluxDB.Net.Tests.Core.csproj", "{8541C9EE-9352-44B3-8E50-D34CF00B2495}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,9 +41,20 @@ Global
 		{56B4EF11-8B2A-4862-8723-FC4368274768}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56B4EF11-8B2A-4862-8723-FC4368274768}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56B4EF11-8B2A-4862-8723-FC4368274768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27ED586A-2EE0-4A0B-92BB-AFF6A611182F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27ED586A-2EE0-4A0B-92BB-AFF6A611182F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27ED586A-2EE0-4A0B-92BB-AFF6A611182F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27ED586A-2EE0-4A0B-92BB-AFF6A611182F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8541C9EE-9352-44B3-8E50-D34CF00B2495}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8541C9EE-9352-44B3-8E50-D34CF00B2495}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8541C9EE-9352-44B3-8E50-D34CF00B2495}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8541C9EE-9352-44B3-8E50-D34CF00B2495}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {91391F6E-F035-49EF-B99E-3E55A5FF90F6}
 	EndGlobalSection
 	GlobalSection(CodealikeProperties) = postSolution
 		SolutionGuid = 8c17e567-62f8-4eb6-bc82-a3715bfa171d
