@@ -131,6 +131,18 @@ namespace InfluxDB.Net.Client
 
         #region Continuous Queries
 
+        public Task<InfluxDbApiResponse> CreateContinuousQueryAsync(IEnumerable<ApiResponseErrorHandlingDelegate> errorHandlers, string database, string name, string query)
+        {
+            return RequestAsync(errorHandlers, HttpMethod.Post, "query", null,
+                new Dictionary<string, string>
+                {
+                    {QueryParams.Db, database},
+                    {QueryParams.Query, "CREATE CONTINUOUS QUERY " + name + " ON " + database
+                        + " BEGIN " + query + " END"}
+                },
+                requestTimeout: _configuration.RequestTimeout);
+        }
+
         public async Task<InfluxDbApiResponse> GetContinuousQueries(IEnumerable<ApiResponseErrorHandlingDelegate> errorHandlers, string database)
         {
             return await RequestAsync(errorHandlers, HttpMethod.Get, "query", null,

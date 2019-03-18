@@ -37,6 +37,8 @@ namespace InfluxDB.Net.Contracts
 
         Task<InfluxDbApiResponse> DeleteContinuousQueryAsync(string database, int id);
 
+        Task<InfluxDbApiResponse> CreateContinuousQueryAsync(string database, string name, string query);
+
         #endregion Continuous Queries
 
         #region Series

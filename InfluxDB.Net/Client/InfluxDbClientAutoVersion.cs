@@ -103,6 +103,11 @@ namespace InfluxDB.Net.Client
 
         #region Continuous Queries
 
+        public Task<InfluxDbApiResponse> CreateContinuousQueryAsync(IEnumerable<ApiResponseErrorHandlingDelegate> errorHandlers, string database, string name, string query)
+        {
+            return _influxDbClient.CreateContinuousQueryAsync(errorHandlers, database, name, query);
+        }
+
         public async Task<InfluxDbApiResponse> GetContinuousQueries(IEnumerable<ApiResponseErrorHandlingDelegate> errorHandlers, string database)
         {
             return await _influxDbClient.GetContinuousQueries(errorHandlers, database);
