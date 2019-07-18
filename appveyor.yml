@@ -1,0 +1,18 @@
+version: '{build}'
+branches:  
+  only:
+  - netcore
+build_script:
+- ps: .\pack.ps1
+test: off
+artifacts:  
+- path: .\artifacts\*.nupkg
+  name: NuGet
+deploy:
+- provider: NuGet
+  name: production
+  api_key:
+    secure: "QXXyEee/wuuGwKOeU0FEJf8v2S0soTkM2NkuhKySVj/dJ15ciG7JfxtO+SeqplFi"
+  skip_symbols: true
+  on:
+    branch: netcore

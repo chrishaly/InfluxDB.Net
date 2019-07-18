@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <PackageId>InfluxDB.Net.Core.Aolyn</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
